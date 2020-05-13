@@ -22,6 +22,7 @@ pruning_ratio = 0.9
 def train(args):
 
     print('Number of GPUs available: ' + str(torch.cuda.device_count()))
+    # CAEP 的初始化貌似少了个参数
     model = nn.DataParallel(CAEP(num_resblocks).cuda())
     print('Done Setup Model.')
 
